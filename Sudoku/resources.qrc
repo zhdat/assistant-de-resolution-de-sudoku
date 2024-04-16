@@ -1,0 +1,42 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Easy.txt</file>
+        <file>Medium.txt</file>
+        <file>Hard.txt</file>
+        <file>Insane.txt</file>
+        <file>Theme.txt</file>
+        <file>images/backspace.png</file>
+        <file>images/backspace_white.png</file>
+        <file>images/icon.jpg</file>
+        <file>images/icon.png</file>
+        <file>images/menu-boxed.png</file>
+        <file>images/color-bucket.png</file>
+        <file>images/close-r.png</file>
+        <file>images/card-spades.png</file>
+        <file>images/card-hearts.png</file>
+        <file>images/card-diamonds.png</file>
+        <file>images/card-clubs.png</file>
+        <file>images/add-r.png</file>
+        <file>images/signal.png</file>
+        <file>images/shape-rhombus.png</file>
+        <file>images/shape-hexagon.png</file>
+        <file>images/shape-circle.png</file>
+        <file>Fonts/Variable/Pally-Variable.ttf</file>
+        <file>sound/OST.wav</file>
+        <file>sound/click3.wav</file>
+        <file>sound/click2.wav</file>
+        <file>sound/click1.wav</file>
+        <file>sound/win.wav</file>
+        <file>license.txt</file>
+        <file>Fonts/Variable/Supreme-Variable.ttf</file>
+        <file>Fonts/Variable/prstart.ttf</file>
+        <file>Fonts/Variable/Chubbo-Variable.ttf</file>
+        <file>Fonts/OTF/Supreme-Medium.otf</file>
+        <file>images/play-pause-r.png</file>
+        <file>images/play-button-r.png</file>
+        <file>images/music.png</file>
+        <file>images/info.png</file>
+        <file>images/volume-up.png</file>
+        <file>images/volume-down.png</file>
+    </qresource>
+</RCC>

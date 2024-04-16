@@ -1,0 +1,12 @@
+QComboBox{background-color:rgb(28, 113, 216); color:black ; border:1px }
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+(c'est une idée de style pour la combobox)
