@@ -1,93 +1,87 @@
-# Assistant de résolution de Sudoku
+# Rapport Aide Sudoku
 
+## Introduction
 
+Notre projet, "Aide Sudoku", est un logiciel développé dans l'environnement Qt Creator, conçu pour offrir une assistance intelligente aux amateurs de Sudoku. En combinant la simplicité des règles du jeu avec les capacités de l'informatique moderne, notre objectif est de simplifier la résolution des grilles tout en enrichissant l'expérience de jeu. Ce rapport présente les fonctionnalités clés de notre application, démontrant comment elle peut améliorer la jouabilité et stimuler l'intérêt pour ce jeu de réflexion classique.
 
-## Getting started
+## Fonctionnalités Marquantes
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Fenêtre de Login
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- Permet l'accès au classement par niveau de difficulté(classement en local), aux réglages de volume et de VFX, ainsi qu'à la personnalisation du pseudo et de la difficulté de la grille.
+- Offre une interface conviviale pour une expérience utilisateur optimale.
 
-## Add your files
+### Fenêtre Principale de Jeu
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- Affiche deux grilles : une grille de jeu à remplir et une grille d'aide pour suivre les choix effectués.
+- Interface claire et intuitive pour une concentration maximale sur le jeu.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.ecole.ensicaen.fr/ravix/assistant-de-resolution-de-sudoku.git
-git branch -M master
-git push -uf origin master
-```
+### Toolbar Intuitive
 
-## Integrate with your tools
+- Fournit un accès rapide aux fonctionnalités essentielles via les menus Fichier, Options et Aide.
+- Facilite la navigation et l'utilisation du logiciel.
 
-- [ ] [Set up project integrations](https://gitlab.ecole.ensicaen.fr/ravix/assistant-de-resolution-de-sudoku/-/settings/integrations)
+### Options de Personnalisation
 
-## Collaborate with your team
+- Permet aux utilisateurs de changer de thème et de difficulté pour une expérience de jeu personnalisée.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Feedback Visuel et sonore
 
-## Test and Deploy
+- Barre de progression et timer offrant un feedback visuel sur la progression du joueur et le temps écoulé.
+- Renforce l'immersion et l'engagement du joueur dans le jeu.
+- Effets sonores permettant un feedback auditif contextuel.
 
-Use the built-in continuous integration in GitLab.
+### Fenêtre de Victoire
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+- Affiche une fenêtre de victoire une fois la partie terminée avec succès.
+- Confirme la réussite du joueur et ajoute une dimension gratifiante à l'expérience de jeu.
 
-***
+### Langues et Internationalisation
 
-# Editing this README
+- Prise en Charge de l'Internationalisation : L'application prend en charge le français et l'anglais en fonction de la langue par défaut de l'ordinateur.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## Perspective d'évolution
 
-## Suggestions for a good README
+### Adapdation sur mobile
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+- L'UI utilisée étant le style "Bento UI" nous n'aurions aucun mal à le transposer sur mobile (en retirant la fenêtre de prévisualisation à droite afin d'éviter de surcharger)
 
-## Name
-Choose a self-explaining name for your project.
+- Compatibilité avec les Plateformes Mobiles : Le choix du langage C++ offre une bonne compatibilité pour l'adaptation de l'application sur les plateformes mobiles telles qu'Android et iOS.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+- Utilisation de Qt : En utilisant Qt, la transition vers les appareils mobiles est facilitée grâce à sa capacité à compiler le même code source sur différentes plateformes.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Mise en place de différent niveau d'aide
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+- Une désactivation des aides
+- Une vérification colonne/ligne
+- Une vérification du carré
+- Une vérification des trois
+- Une vérification des trois + indicateur coloré s'il reste une unique possibilité dans la case
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Structure du Code
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+- Modèle-Vue-Présentateur (MVP) : Le code suit une architecture MVP pour une séparation claire des préoccupations.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+- Classes pour les Vues : Chaque vue est représentée par une classe distincte, facilitant la gestion de l'interface utilisateur.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- Classe "Tools" : Gère les thèmes de base, les options de musique et la gestion des fichiers comme le leaderboard.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- Widget Personnalisé pour la Grille : Un widget personnalisé représente la grille de droite, offrant une expérience visuelle dynamique.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+## Outils Utilisés
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- Qt Creator : Utilisé pour le développement du code de l'application, offrant un environnement de développement intégré (IDE) adapté à qt.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- Qt Designer : Employé pour concevoir les vues de l'interface utilisateur de manière visuelle et intuitive, facilitant ainsi le processus de conception.
 
-## License
-For open source projects, say how it is licensed.
+- Git : Utilisé comme gestionnaire de version pour le suivi des modifications, la collaboration et la gestion du code source du projet.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- Linguist : Mis en œuvre pour la mise en place de l'internationalisation, permettant la traduction et l'adaptation de l'application dans différentes langues.
+
+## Conclusion
+
+Le projet "Aide Sudoku" réalisé dans Qt Creator offre une expérience de jeu riche, intuitive et personnalisée. Les fonctionnalités marquantes telles que la fenêtre de login, la toolbar intuitive et les options de personnalisation contribuent à rendre le jeu de Sudoku accessible et gratifiant pour tous les utilisateurs.
+
+## A Propos
+
+Ce projet a été développé par Jantet Clément & Ravix Calliste et est distribué sous licence MIT.
